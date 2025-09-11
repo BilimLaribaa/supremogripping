@@ -421,24 +421,23 @@
                 <p class="fnt-18">and we will get back to you.</p>
                 <div class="contact-form">
                     <form id="contactform">
-                        <input type="hidden" name="_token" value="ebq0oyrrpoOifO5FsJAZN6DRWT2pLbSwYl1Mx5rF">                        <div class="col-md-6 form-field input-halfrght">
-                            <input name="name" type="text" class="form-input" placeholder="Full Name*" required>
-                        </div>
-                        <div class="col-md-6 form-field input-halflft">
-                            <input name="mail" type="text" class="form-input" placeholder="Email*" required>
-                        </div>
-                        <div class="col-lg-12 col-md-12 form-field">
-                            <textarea name="comment" cols="1" rows="2" class="form-comment"
-                                placeholder="Comment*" required></textarea>
-                        </div>
-                        <div class="col-md-12 form-field no-margin">
-                            <div class="error">
-                                <div id="error"></div>
-                            </div>
-                           
-                                <button id="submit-btn" name="name" type="button" onclick="EnquiryFormSubmit()" class="form-submit-btn">Submit Now</button>
-                        </div>
-                    </form>
+    <input type="hidden" name="_token" value="ebq0oyrrpoOifO5FsJAZN6DRWT2pLbSwYl1Mx5rF">
+    <div class="col-md-6 form-field input-halfrght">
+        <input name="name" type="text" class="form-input" placeholder="Full Name*" required>
+    </div>
+    <div class="col-md-6 form-field input-halflft">
+        <input name="mail" type="email" class="form-input" placeholder="Email*" required>
+    </div>
+    <div class="col-lg-12 col-md-12 form-field">
+        <textarea name="comment" cols="1" rows="2" class="form-comment" placeholder="Comment*" required></textarea>
+    </div>
+    <div class="col-md-12 form-field no-margin">
+        <div class="error">
+            <div id="error"></div>
+        </div>
+        <button id="submit-btn" type="submit" class="form-submit-btn">Submit Now</button>
+    </div>
+</form>
 
                 </div>
             </div>
@@ -446,7 +445,7 @@
     </section>
  
 
-    <script>
+    <!-- <script>
         function EnquiryFormSubmit() {
             // --- Ajax request --- \\
             $.ajax({
@@ -473,6 +472,52 @@
             })
             // --- Ajax request --- \\
         }
+    </script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contactform');
+            const submitBtn = document.getElementById('submit-btn');
+            const errorDiv = document.getElementById('error');
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Disable button and show loading state
+                submitBtn.disabled = true;
+                document.getElementById('loadingoverlay').style.display = 'block';
+                errorDiv.innerHTML = '';
+                errorDiv.className = '';
+
+                // Create FormData object
+                const formData = new FormData(form);
+
+                // Send the request to sendmail.php
+                fetch('sendmail.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            errorDiv.className = 'alert alert-success';
+                            errorDiv.innerHTML = 'Your enquiry has been sent successfully';
+                            form.reset();
+                        } else {
+                            errorDiv.className = 'alert alert-danger';
+                            errorDiv.innerHTML = data.message ||
+                                'Something went wrong. Please try again.';
+                        }
+                    })
+                    .catch(error => {
+                        errorDiv.className = 'alert alert-danger';
+                        errorDiv.innerHTML = 'Network error. Please try again.';
+                    })
+                    .finally(() => {
+                        submitBtn.disabled = false;
+                        document.getElementById('loadingoverlay').style.display = 'none';
+                    });
+            });
+        });
     </script>
 ;
 

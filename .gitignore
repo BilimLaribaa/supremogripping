@@ -1,2 +1,5 @@
 *.jpg
 *.png
+*.json
+*.php
+/vendor
