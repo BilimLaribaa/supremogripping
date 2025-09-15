@@ -7175,7 +7175,7 @@ section.experienceSec{
 
 /*************************************End Home8****************************************************/
 
-@charset "utf-8";
+
 /* CSS Document */
  @media(min-width:992px) and (max-width:1200px){
      .faq_04 h3.marbtm30{
@@ -9353,7 +9353,7 @@ section.experienceSec{
     .header8 #main-navigation-wrapper.navbar-default .navbar-nav > li.current_page_parent.current-menu-ancestor.current-menu-parent > i{
         color: #fff;
     }
-    .header6 #main-navigation-wrapper .nav > li > a,{
+    .header6 #main-navigation-wrapper .nav > li > a {
         color: #48402b;
     }
     .header8 #main-navigation-wrapper .nav > li > a,
@@ -9567,6 +9567,36 @@ section.experienceSec{
         margin-top: 80px;
     }
     .home6Slider a.header-requestbtn.learn-more.our-solution{
+        width: 155px;
+        padding: 8px 10px;
+        font-size: 16px;
+    }
+    .home7 #minimal-bootstrap-carousel .carousel-caption .thm-container .box .content.text-left{
+        padding-left: 80px;
+        width: 100%;
+    }
+    .home7Slider .carousel-caption .thm-container .box .content::before{
+        height: 395px;
+    }
+    .home7Slider .carousel-caption .topText{
+        margin-top: 80px;
+    }
+    .home7Slider a.header-requestbtn.learn-more.our-solution{
+        width: 155px;
+        padding: 8px 10px;
+        font-size: 16px;
+    }
+    .home8 #minimal-bootstrap-carousel .carousel-caption .thm-container .box .content.text-left{
+        padding-left: 80px;
+        width: 100%;
+    }
+    .home8Slider .carousel-caption .thm-container .box .content::before{
+        height: 395px;
+    }
+    .home8Slider .carousel-caption .topText{
+        margin-top: 80px;
+    }
+    .home8Slider a.header-requestbtn.learn-more.our-solution{
         width: 155px;
         padding: 8px 10px;
         font-size: 16px;
