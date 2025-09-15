@@ -12,298 +12,410 @@
    <link href="public/css/style.css" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=Teko:300,400,500,600,700&amp;display=swap" rel="stylesheet">
    <link rel="stylesheet" href="public/css/animate.min.css">
-   
+
    <link href="public/css/responsive_bootstrap_carousel.css" rel="stylesheet" media="all">
    <style>
-   /* All the CSS from the original page remains the same */
-   #loadingoverlay{
-    position: fixed;
-    top: 0;
-    z-index: 10000;
-    width: 100%;
-    height:100%;
-    display: none;
-    background: rgba(0,0,0,0.6);
-  }
-  .loadingcv-spinner {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .loadingspinner {
-    width: 40px;
-    height: 40px;
-    border: 4px #ddd solid;
-    border-top: 4px #2e93e6 solid;
-    border-radius: 50%;
-    animation: sp-anime 0.8s infinite linear;
-  }
-  @keyframes  sp-anime {
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  .is-hide{
-    display:none;
-  }
-  .welcome-section-outer{
-	position:relative;
-	z-index:1;
-}
+      /* All the CSS from the original page remains the same */
+      #loadingoverlay {
+         position: fixed;
+         top: 0;
+         z-index: 10000;
+         width: 100%;
+         height: 100%;
+         display: none;
+         background: rgba(0, 0, 0, 0.6);
+      }
 
-.video-counter-bg-white{
-	position: relative;
-}
+      .loadingcv-spinner {
+         height: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
 
-.welcom-to-section{
-	padding-right:0px;
-}
+      .loadingspinner {
+         width: 40px;
+         height: 40px;
+         border: 4px #ddd solid;
+         border-top: 4px #2e93e6 solid;
+         border-radius: 50%;
+         animation: sp-anime 0.8s infinite linear;
+      }
 
-.welcom-sign-info{text-align:left;}
-.welcom-sign-info span,
-.welcom-sign-info strong{display:block; color:#00173c;}
+      @keyframes sp-anime {
+         100% {
+            transform: rotate(360deg);
+         }
+      }
 
-@media  only screen and (max-width:1199px){
-	.welcom-sign-pic{max-width:110px;}
-}
+      .is-hide {
+         display: none;
+      }
 
-@media  only screen and (max-width:991px){
-	.welcom-to-section{
-		padding-right:0px;
-	}
-}
-@media  only screen and (max-width:767px){
-	.welcome-section-top{
-		padding-top: 30px;
-		padding-bottom: 30px;
-	}
-}
-@media  only screen and (max-width:480px){
-	.welcom-to-section-bottom{
-		display:inherit !important;
-	}
-	.welcom-btn-position{
-		display:inline-block;
-	}
+      .welcome-section-outer {
+         position: relative;
+         z-index: 1;
+      }
 
-	.welcom-sign-pic {
-		max-width: 150px;
-	}
+      .video-counter-bg-white {
+         position: relative;
+      }
 
-	.welcom-to-section-bottom img{
-		padding-top: 20px;
-	}
-}
+      .welcom-to-section {
+         padding-right: 0px;
+      }
 
-.since-year-outer{position:relative}
-.since-year{position: absolute;right: 0px;top: -30px;z-index: 1;}
-.since-year span{
-	color: #00173c;
-	font-size: 106px;
-	font-weight: 500;
-	font-family: 'Teko', sans-serif;
-	display: inline-block;
-	line-height: 0px;
-	position: relative;
-	bottom: -16px;
-	padding-right: 10px;
-}
-.since-year strong{
-	color: #fff;
-	font-size: 120px;
-	font-weight: 500;
-	font-family: 'Teko', sans-serif;
-	display: inline-block;
-	background-color: #1572ba;
-	line-height: 50px;
-	padding: 40px 10px 20px 12px;
-}
+      .welcom-sign-info {
+         text-align: left;
+      }
 
-.site-list-style-one{
-	list-style:none;
-	margin-bottom:30px;
+      .welcom-sign-info span,
+      .welcom-sign-info strong {
+         display: block;
+         color: #00173c;
+      }
 
-}
+      @media only screen and (max-width:1199px) {
+         .welcom-sign-pic {
+            max-width: 110px;
+         }
+      }
 
-.site-list-style-one li{
-	font-family: 'Teko', sans-serif;
-	color:#00173c;
-	font-size:24px;
-	position:relative;
-    padding-left:30px;
-	font-weight: 500;
-}
+      @media only screen and (max-width:991px) {
+         .welcom-to-section {
+            padding-right: 0px;
+         }
+      }
 
-.site-list-style-one li:after{
-	position: absolute;
-	content: '';
-	left: 0px;
-	top: 17px;
-	width: 20px;
-	height: 2px;
-	background-color: #1572ba;
-}
+      @media only screen and (max-width:767px) {
+         .welcome-section-top {
+            padding-top: 30px;
+            padding-bottom: 30px;
+         }
+      }
 
-@media  only screen and (max-width:991px){
-	.since-year-outer{text-align:right;}
-	.since-year{position:inherit; top: -30px;}
-}
+      @media only screen and (max-width:480px) {
+         .welcom-to-section-bottom {
+            display: inherit !important;
+         }
 
-@media  only screen and (max-width:767px){
-	.since-year{position:inherit; top: -45px;}
-}
+         .welcom-btn-position {
+            display: inline-block;
+         }
 
-@media  only screen and (max-width:480px){
-	.since-year span{font-size:36px;}
+         .welcom-sign-pic {
+            max-width: 150px;
+         }
 
-.since-year strong {
-    font-size: 60px;
-    padding: 15px 10px 5px 12px;
-}
-}
-/*Large Title*/
-.hilite-large-title{position:relative;}
-.hilite-large-title span{font-size:120px;line-height:100px;color:#00173c; opacity:0.1; font-family: 'Teko', sans-serif; display: inline-block;}
-@media  only screen and (max-width:991px){
-	.hilite-large-title span{
-		font-size:72px;
-		line-height:76px;
-	}
-}
-@media  only screen and (max-width:480px){
-	.hilite-large-title span{
-		font-size:40px;
-		line-height:46px;
-	}
-}
+         .welcom-to-section-bottom img {
+            padding-top: 20px;
+         }
+      }
 
+      .since-year-outer {
+         position: relative
+      }
 
-.img-colarge{position:relative;height:100%;margin-bottom: 80px;}
+      .since-year {
+         position: absolute;
+         right: 0px;
+         top: -30px;
+         z-index: 1;
+      }
 
-.colarge-1{position:relative;margin:40px 30px 0px 40px;	z-index:1;}
-.colarge-1:before,
-.colarge-1:after{position:absolute;	border:15px solid #1572ba;	content:'';	width:80%;	height:80%;	z-index:-1;}
-.colarge-1:before{	left: -40px;	top: -40px;}
-.colarge-1:after{	right:-30px;	bottom:-30px;}
+      .since-year span {
+         color: #00173c;
+         font-size: 106px;
+         font-weight: 500;
+         font-family: 'Teko', sans-serif;
+         display: inline-block;
+         line-height: 0px;
+         position: relative;
+         bottom: -16px;
+         padding-right: 10px;
+      }
 
+      .since-year strong {
+         color: #fff;
+         font-size: 120px;
+         font-weight: 500;
+         font-family: 'Teko', sans-serif;
+         display: inline-block;
+         background-color: #1572ba;
+         line-height: 50px;
+         padding: 40px 10px 20px 12px;
+      }
 
+      .site-list-style-one {
+         list-style: none;
+         margin-bottom: 30px;
 
-.img-colarge2{position:relative;height:100%;margin-bottom: 110px;}
+      }
 
-.colarge-2{
-	position: relative;
-	margin-right: 180px;
-	z-index: 1;
-	border: 10px solid #1572ba;
-	box-shadow: 0px 0px 30px rgba(0,0,0,0.5);
-}
+      .site-list-style-one li {
+         font-family: 'Teko', sans-serif;
+         color: #00173c;
+         font-size: 24px;
+         position: relative;
+         padding-left: 30px;
+         font-weight: 500;
+      }
 
-.colarge-2-1{position:absolute;left: 160px; bottom:0px;max-width:370px;}
+      .site-list-style-one li:after {
+         position: absolute;
+         content: '';
+         left: 0px;
+         top: 17px;
+         width: 20px;
+         height: 2px;
+         background-color: #1572ba;
+      }
 
+      @media only screen and (max-width:991px) {
+         .since-year-outer {
+            text-align: right;
+         }
 
+         .since-year {
+            position: inherit;
+            top: -30px;
+         }
+      }
 
+      @media only screen and (max-width:767px) {
+         .since-year {
+            position: inherit;
+            top: -45px;
+         }
+      }
 
-.since-year-outer2{position:relative}
-.since-year2{
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	z-index: 1;
-}
-.since-year2 span{
-	color:#00173c;
-	font-size: 60px;
-	font-weight: 300;
-	font-family: 'Teko', sans-serif;
-	display: block;
-	line-height: 60px;
-	position: relative;
-}
-.since-year2 strong{
-	color:#1572ba;
-	font-size: 100px;
-	font-weight: 500;
-	font-family: 'Teko', sans-serif;
-	display: block;
-	line-height: 50px;
-}
+      @media only screen and (max-width:480px) {
+         .since-year span {
+            font-size: 36px;
+         }
 
-@media  only screen and (max-width:991px){
-.colarge-2{
-	margin-right: 0px;
-	max-width: 420px;
-}
-.colarge-2 img{
-	width:100%;
-}
+         .since-year strong {
+            font-size: 60px;
+            padding: 15px 10px 5px 12px;
+         }
+      }
 
-.colarge-2-1 {
-    left: auto;
-	right:0px;
-}
-}
+      /*Large Title*/
+      .hilite-large-title {
+         position: relative;
+      }
 
-@media  only screen and (max-width:767px){
-.colarge-2{
-    max-width: 100%;
-    width: 50%;
-}
-.colarge-2 img{
-	width:100%;
-}
+      .hilite-large-title span {
+         font-size: 120px;
+         line-height: 100px;
+         color: #00173c;
+         opacity: 0.1;
+         font-family: 'Teko', sans-serif;
+         display: inline-block;
+      }
 
-.colarge-2-1 {
-	width: 54%;
-	top: 0px;
-	max-width: 100%;
-}
-}
+      @media only screen and (max-width:991px) {
+         .hilite-large-title span {
+            font-size: 72px;
+            line-height: 76px;
+         }
+      }
+
+      @media only screen and (max-width:480px) {
+         .hilite-large-title span {
+            font-size: 40px;
+            line-height: 46px;
+         }
+      }
 
 
-.counter2-section-outer-bottom{padding-bottom: 0px;}
-.counter2-section-outer-top{padding-bottom: 50px;}
+      .img-colarge {
+         position: relative;
+         height: 100%;
+         margin-bottom: 80px;
+      }
 
-.counter-section-outer-top{padding-top:50px; padding-bottom: 20px;}
-.counter-outer .counter{font-size:70px; position:relative; display:inline-block; margin-left: -30px;}
-.counter-outer .counter:after{font-size:70px; position:absolute;content:'+'; right:-30px; top: 0px;}
+      .colarge-1 {
+         position: relative;
+         margin: 40px 30px 0px 40px;
+         z-index: 1;
+      }
+
+      .colarge-1:before,
+      .colarge-1:after {
+         position: absolute;
+         border: 15px solid #1572ba;
+         content: '';
+         width: 80%;
+         height: 80%;
+         z-index: -1;
+      }
+
+      .colarge-1:before {
+         left: -40px;
+         top: -40px;
+      }
+
+      .colarge-1:after {
+         right: -30px;
+         bottom: -30px;
+      }
 
 
 
-.counter-outer span.title-style-2{
-	display: block;
-	font-weight: 600;
-	font-size: 28px;
-}
+      .img-colarge2 {
+         position: relative;
+         height: 100%;
+         margin-bottom: 110px;
+      }
 
-@media  only screen and (max-width:991px){
-.img-colarge {
-    padding-top: 30px;
-	margin: -10px;
-}
+      .colarge-2 {
+         position: relative;
+         margin-right: 180px;
+         z-index: 1;
+         border: 10px solid #1572ba;
+         box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+      }
 
-.colarge-1{
-	position: relative;
-	z-index:1;
-}
+      .colarge-2-1 {
+         position: absolute;
+         left: 160px;
+         bottom: 0px;
+         max-width: 370px;
+      }
 
-.colarge-1 img{
-	width:100%;
-}
-}
 
-@media  only screen and (max-width:767px){
-.img-colarge {
-	margin: 0px;
-	padding-top: 0px;
-}
-.colarge-1{
-	max-height: inherit;
-	margin-bottom:30px;
-	padding:0px;
-}
-}
-  </style>
+
+
+      .since-year-outer2 {
+         position: relative
+      }
+
+      .since-year2 {
+         position: absolute;
+         left: 0px;
+         top: 0px;
+         z-index: 1;
+      }
+
+      .since-year2 span {
+         color: #00173c;
+         font-size: 60px;
+         font-weight: 300;
+         font-family: 'Teko', sans-serif;
+         display: block;
+         line-height: 60px;
+         position: relative;
+      }
+
+      .since-year2 strong {
+         color: #1572ba;
+         font-size: 100px;
+         font-weight: 500;
+         font-family: 'Teko', sans-serif;
+         display: block;
+         line-height: 50px;
+      }
+
+      @media only screen and (max-width:991px) {
+         .colarge-2 {
+            margin-right: 0px;
+            max-width: 420px;
+         }
+
+         .colarge-2 img {
+            width: 100%;
+         }
+
+         .colarge-2-1 {
+            left: auto;
+            right: 0px;
+         }
+      }
+
+      @media only screen and (max-width:767px) {
+         .colarge-2 {
+            max-width: 100%;
+            width: 50%;
+         }
+
+         .colarge-2 img {
+            width: 100%;
+         }
+
+         .colarge-2-1 {
+            width: 54%;
+            top: 0px;
+            max-width: 100%;
+         }
+      }
+
+
+      .counter2-section-outer-bottom {
+         padding-bottom: 0px;
+      }
+
+      .counter2-section-outer-top {
+         padding-bottom: 50px;
+      }
+
+      .counter-section-outer-top {
+         padding-top: 50px;
+         padding-bottom: 20px;
+      }
+
+      .counter-outer .counter {
+         font-size: 70px;
+         position: relative;
+         display: inline-block;
+         margin-left: -30px;
+      }
+
+      .counter-outer .counter:after {
+         font-size: 70px;
+         position: absolute;
+         content: '+';
+         right: -30px;
+         top: 0px;
+      }
+
+
+
+      .counter-outer span.title-style-2 {
+         display: block;
+         font-weight: 600;
+         font-size: 28px;
+      }
+
+      @media only screen and (max-width:991px) {
+         .img-colarge {
+            padding-top: 30px;
+            margin: -10px;
+         }
+
+         .colarge-1 {
+            position: relative;
+            z-index: 1;
+         }
+
+         .colarge-1 img {
+            width: 100%;
+         }
+      }
+
+      @media only screen and (max-width:767px) {
+         .img-colarge {
+            margin: 0px;
+            padding-top: 0px;
+         }
+
+         .colarge-1 {
+            max-height: inherit;
+            margin-bottom: 30px;
+            padding: 0px;
+         }
+      }
+   </style>
 </head>
 
 <body>
@@ -324,7 +436,8 @@
                         href="mailto:alber@supremogrippings.com">alber@supremogrippings.com</a></li>
                </ul>
                <div class="header-socials display-block">
-                  <a href="https://www.linkedin.com/company/supremo-grippings/?viewAsMember=true"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                  <a href="https://www.linkedin.com/company/supremo-grippings/?viewAsMember=true"><i
+                        class="fa fa-linkedin" aria-hidden="true"></i></a>
                </div>
             </div>
          </div>
@@ -332,7 +445,8 @@
       <nav id="main-navigation-wrapper" class="navbar navbar-default navbar2-wrap ">
          <div class="container">
             <div class="navbar-header">
-               <div class="logo-menu"><a href="index.html"><img src="public/images/white-logo2.png" alt="logo"></a></div>
+               <div class="logo-menu"><a href="index.html"><img src="public/images/white-logo2.png" alt="logo"></a>
+               </div>
                <button type="button" data-toggle="collapse" data-target="#main-navigation" aria-expanded="false"
                   class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span
                      class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
@@ -362,128 +476,159 @@
    </header>
 
    <div class="inner-pages-bnr">
-         <img src="public/images/product-section-banner.jpg" class="img-responsive" alt="Collets-banner-image">
-         <div class="banner-caption">
-            <h1>Collets</h1>
-            <ul class="breadcumb">
-               <li><a href="index.html">Home</a> - </li>
-               <li>Collets</li>
-            </ul>
-         </div>
+      <img src="public/images/product-section-banner.jpg" class="img-responsive" alt="Collets-banner-image">
+      <div class="banner-caption">
+         <h1>Collets</h1>
+         <ul class="breadcumb">
+            <li><a href="index.html">Home</a> - </li>
+            <li>Collets</li>
+         </ul>
       </div>
-      <!--=========Banner end============-->
-      <section class="pad100-top-bottom">
-         <div class="container">
-            <div class="row">
-               <!--=========Servie Right Start============-->
-               <div class="col-md-8 right-column">
-                <div class="service-right-desc">
-                   <span class="image_hover ">
-                   <img src="public/images/product_images/01%20Bench%20Type%20VMC%20%26%20HMC%20Hydraulic%20Fixture/01.jpg" class="img-responsive zoom_img_effect" alt="manufacture-image">
-                   </span>
-                   <h5>Bench Type Vmc Fixture offer to work or machining the component in the top portion.
-                      . i.e Z Axis Cutter id help to do substractive manufacturing on the fixture.</h5>
-                   </div>
-                <div class="specialization-cl">
-                   <div class="special-img image_hover">
-                      <img src="public/images/product_images/01%20Bench%20Type%20VMC%20%26%20HMC%20Hydraulic%20Fixture/02.jpg" class="img-responsive zoom_img_effect" alt="special-image">
-                   </div>
-                   <div class="special-img image_hover">
-                      <img src="public/images/product_images/01%20Bench%20Type%20VMC%20%26%20HMC%20Hydraulic%20Fixture/03.jpg" class="img-responsive zoom_img_effect" alt="special-image">
-                   </div>
-                </div>
+   </div>
+   <!--=========Banner end============-->
+   <section class="pad100-top-bottom">
+      <div class="container">
+         <div class="row">
+            <!--=========Servie Right Start============-->
+            <div class="col-md-8 right-column">
+               <div class="service-right-desc">
+                  <span class="image_hover ">
+                     <img src="public/images/product_images/17 Collets/Collet Type Expanding Mandrels  Chucks.jpg"
+                        style="width:800px; height:500px;" class="img-responsive zoom_img_effect"
+                        alt="manufacture-image">
+                  </span>
+                  <h5>
+                     We provide custom-built segmented collets with bond filling to prevent dust or burr from entering
+                     inside, ensuring precision runout and long life.
+                     On special request, rubber-bonded collets can also be provided.
+                  </h5>
 
-             </div>
-               <div class="col-md-4 left-column">
-                  <ul class="category-list">
-                     <li><a href="hydraulic-expanding.html">Hydraulic Expanding Mandrels Chucks</a></li>
-                     <li><a href="collet-type-expanding.html">Collet Type Expanding Mandrels Chucks</a></li>
-                     <li><a href="inspection-mandrels.html">Inspection Mandrels Turning Mandrels Chucks</a></li>
-                     <li><a href="hydraulic-lock-nut.html">Hydraulic Lock Nut</a></li>
-                     <li><a href="cnc-hobbing-arbors.html">CNC Hobbing Machine Arbors</a></li>
-                     <li><a href="collets.html" class="active-category">Collets</a></li>
-                     <li><a href="face-drive.html">Face Drive</a></li>
-                  </ul>
-
-                  <div class="contact-help" style="padding-bottom: 64px;">
-                     <div class="office-info-col wdt-100">
-                        <h4>CONTACT US </h4>
-                        <ul class="office-information">
-                           <li class="office-loc">
-                              <span class="info-txt">Corporate Address: <br/>HAQ Tower, Besides MTDC Office
-                                 Aurangabad(431005), M.H., India</span>
-                           </li>
-                           <li class="office-fac">
-                              <span class="info-txt">Plant Address: <br/>K-238/6, MIDC, Waluj
-                                 Aurangabad(431136), M.H., India</span>
-                           </li>
-                           <li class="office-phn">
-                              <span class="info-txt fnt_17">+91 7020107536<br/>+91 8796402966</span>
-                           </li>
-                           <li class="office-msg">
-                              <span class="info-txt fnt_17" style="z-index: 100;">sales@supremogrippings.com<br/>alber@supremogrippings.com</span>
-                           </li>
-                        </ul>
-                     </div>
+               </div>
+               <div class="specialization-cl">
+                  <div class="special-img image_hover">
+                     <img src="public/images/product_images/17 Collets/Collet 402.png"
+                        class="img-responsive zoom_img_effect" alt="special-image" style="width:300px; height:300px;">
+                  </div>
+                  <div class="special-img image_hover">
+                     <img src="public/images/product_images/17 Collets/IMG_20230905_164544.jpg"
+                        class="img-responsive zoom_img_effect" alt="special-image" style="width:300px; height:300px;">
+                  </div>
+                  <div class="special-img image_hover">
+                     <img src="public/images/product_images/17 Collets/IMG_20230905_164621-removebg-preview.png"
+                        class="img-responsive zoom_img_effect" alt="special-image" style="width:300px; height:300px;">
+                  </div>
+                  <div class="special-img image_hover">
+                     <img src="public/images/product_images/17 Collets/IMG_20231221_142058.jpg"
+                        class="img-responsive zoom_img_effect" alt="special-image" style="width:300px; height:300px;">
+                  </div>
+                  <div class="special-img image_hover">
+                     <img src="public/images/product_images/17 Collets/IMG_20250309_070550.jpg"
+                        class="img-responsive zoom_img_effect" alt="special-image" style="width:300px; height:300px;">
+                  </div>
+                  <div class="special-img image_hover">
+                     <img src="public/images/product_images/17 Collets/Slit Collet .png"
+                        class="img-responsive zoom_img_effect" alt="special-image" style="width:300px; height:300px;">
+                  </div>
+                  <div class="special-img image_hover">
+                     <img src="public/images/product_images/17 Collets/WhatsApp Image 2023-01-03 at 9.56.45 AM (1).jpeg"
+                        class="img-responsive zoom_img_effect" alt="special-image" style="width:300px; height:300px;">
                   </div>
                </div>
+
             </div>
-         </div>
-      </section>
-      <!--=========Footer Start============-->
-      <footer>
-         <div class="yellow-background solution-available text-center">
-            <div class="container">
-               <h5>For Any Solution We Are <span>Available</span> For You</h5>
-               <a data-animation="animated fadeInUp" class="header-requestbtn contactus-btn hvr-bounce-to-right"
-                  href="contact.html">Contact us</a>
-            </div>
-         </div>
-         <div class="ftr-section">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-4 col-sm-6 col-xs-12  ftr-about-text">
-                     <h6>Supremo Gripping</h6>
-                     <p class="marbtm20 line-height26">Supremo Grippings is established to provide technology to its customers by bringing world-class Fixtures.</p>
-                     <a class="ftr-read-more" href="about.html">Read More</a>
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-12 ftr-link-column">
-                     <h6>Contact</h6>
-                     <ul class="footer-link">
-                        <li class="ftr-loc">Corporate Address: HAQ Tower, Besides MTDC Office Aurangabad(431005) India</li>
-                        <li class="ftr-fac">Plant Address: K-238/6, MIDC, Waluj Aurangabad(431133), M.H., India</li>
-                        <li class="ftr-phn">+91 7020107536 | +91 8796402966  </li>
-                        <li class="ftr-msg">alber@supremogrippings.com | sales@supremogrippings.com</li>
+            <div class="col-md-4 left-column">
+               <ul class="category-list">
+                  <li><a href="hydraulic-expanding.html">Hydraulic Expanding Mandrels Chucks</a></li>
+                  <li><a href="collet-type-expanding.html">Collet Type Expanding Mandrels Chucks</a></li>
+                  <li><a href="inspection-mandrels.html">Inspection Mandrels Turning Mandrels Chucks</a></li>
+                  <li><a href="hydraulic-lock-nut.html">Hydraulic Lock Nut</a></li>
+                  <li><a href="cnc-hobbing-arbors.html">CNC Hobbing Machine Arbors</a></li>
+                  <li><a href="collets.html" class="active-category">Collets</a></li>
+                  <li><a href="face-drive.html">Face Drive</a></li>
+               </ul>
+
+               <div class="contact-help" style="padding-bottom: 64px;">
+                  <div class="office-info-col wdt-100">
+                     <h4>CONTACT US </h4>
+                     <ul class="office-information">
+                        <li class="office-loc">
+                           <span class="info-txt">Corporate Address: <br />HAQ Tower, Besides MTDC Office
+                              Aurangabad(431005), M.H., India</span>
+                        </li>
+                        <li class="office-fac">
+                           <span class="info-txt">Plant Address: <br />K-238/6, MIDC, Waluj
+                              Aurangabad(431136), M.H., India</span>
+                        </li>
+                        <li class="office-phn">
+                           <span class="info-txt fnt_17">+91 7020107536<br />+91 8796402966</span>
+                        </li>
+                        <li class="office-msg">
+                           <span class="info-txt fnt_17"
+                              style="z-index: 100;">sales@supremogrippings.com<br />alber@supremogrippings.com</span>
+                        </li>
                      </ul>
                   </div>
-                  <div class="col-md-2 col-sm-6 col-xs-12 ftr-follow-column pull-right">
-                     <h6>Follow Us</h6>
-                     <div class="header-socials footer-socials">
-                        <a href="https://www.linkedin.com/company/supremo-grippings/?viewAsMember=true"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                     </div>
-                  </div>
                </div>
             </div>
          </div>
-      </footer>
-      <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
-         <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-               <div class="modal-body">
-                  <h3>Search</h3>
-                  <div class="search-form">
-                     <input type="text" class="search_lightbox_input" placeholder="Search...">
-                     <input type="text" class="search_lghtbox_btn">
+      </div>
+   </section>
+   <!--=========Footer Start============-->
+   <footer>
+      <div class="yellow-background solution-available text-center">
+         <div class="container">
+            <h5>For Any Solution We Are <span>Available</span> For You</h5>
+            <a data-animation="animated fadeInUp" class="header-requestbtn contactus-btn hvr-bounce-to-right"
+               href="contact.html">Contact us</a>
+         </div>
+      </div>
+      <div class="ftr-section">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4 col-sm-6 col-xs-12  ftr-about-text">
+                  <h6>Supremo Gripping</h6>
+                  <p class="marbtm20 line-height26">Supremo Grippings is established to provide technology to its
+                     customers by bringing world-class Fixtures.</p>
+                  <a class="ftr-read-more" href="about.html">Read More</a>
+               </div>
+               <div class="col-md-6 col-sm-6 col-xs-12 ftr-link-column">
+                  <h6>Contact</h6>
+                  <ul class="footer-link">
+                     <li class="ftr-loc">Corporate Address: HAQ Tower, Besides MTDC Office Aurangabad(431005) India</li>
+                     <li class="ftr-fac">Plant Address: K-238/6, MIDC, Waluj Aurangabad(431133), M.H., India</li>
+                     <li class="ftr-phn">+91 7020107536 | +91 8796402966 </li>
+                     <li class="ftr-msg">alber@supremogrippings.com | sales@supremogrippings.com</li>
+                  </ul>
+               </div>
+               <div class="col-md-2 col-sm-6 col-xs-12 ftr-follow-column pull-right">
+                  <h6>Follow Us</h6>
+                  <div class="header-socials footer-socials">
+                     <a href="https://www.linkedin.com/company/supremo-grippings/?viewAsMember=true"><i
+                           class="fa fa-linkedin" aria-hidden="true"></i></a>
                   </div>
                </div>
             </div>
          </div>
       </div>
-      <div id="loadingoverlay">
-         <div class="loadingcv-spinner">
-            <span class="loadingspinner"></span>
+   </footer>
+   <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg">
+         <div class="modal-content">
+            <div class="modal-body">
+               <h3>Search</h3>
+               <div class="search-form">
+                  <input type="text" class="search_lightbox_input" placeholder="Search...">
+                  <input type="text" class="search_lghtbox_btn">
+               </div>
+            </div>
          </div>
       </div>
+   </div>
+   <div id="loadingoverlay">
+      <div class="loadingcv-spinner">
+         <span class="loadingspinner"></span>
+      </div>
+   </div>
    <!--=========Footer end============-->
    <script src="public/js/jquery.min.js"></script>
    <script src="public/js/bootstrap.min.js"></script>
@@ -492,4 +637,5 @@
    <script src="public/js/custom.js"></script>
    <script src="public/js/slick.js"></script>
 </body>
+
 </html>
