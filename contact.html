@@ -474,52 +474,48 @@
         }
     </script> -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('contactform');
-            const submitBtn = document.getElementById('submit-btn');
-            const errorDiv = document.getElementById('error');
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contactform');
+    const submitBtn = document.getElementById('submit-btn');
+    const errorDiv = document.getElementById('error');
 
-            form.addEventListener('submit', function (e) {
-                e.preventDefault();
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
 
-                // Disable button and show loading state
-                submitBtn.disabled = true;
-                document.getElementById('loadingoverlay').style.display = 'block';
-                errorDiv.innerHTML = '';
-                errorDiv.className = '';
+        submitBtn.disabled = true;
+        document.getElementById('loadingoverlay').style.display = 'block';
+        errorDiv.innerHTML = '';
+        errorDiv.className = '';
 
-                // Create FormData object
-                const formData = new FormData(form);
+        const formData = new FormData(form);
 
-                // Send the request to sendmail.php
-                fetch('sendmail.php', {
-                        method: 'POST',
-                        body: formData
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.success) {
-                            errorDiv.className = 'alert alert-success';
-                            errorDiv.innerHTML = 'Your enquiry has been sent successfully';
-                            form.reset();
-                        } else {
-                            errorDiv.className = 'alert alert-danger';
-                            errorDiv.innerHTML = data.message ||
-                                'Something went wrong. Please try again.';
-                        }
-                    })
-                    .catch(error => {
-                        errorDiv.className = 'alert alert-danger';
-                        errorDiv.innerHTML = 'Network error. Please try again.';
-                    })
-                    .finally(() => {
-                        submitBtn.disabled = false;
-                        document.getElementById('loadingoverlay').style.display = 'none';
-                    });
-            });
+        fetch('contact.php', {  // 👈 changed here
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                errorDiv.className = 'alert alert-success';
+                errorDiv.innerHTML = 'Your enquiry has been sent successfully!';
+                form.reset();
+            } else {
+                errorDiv.className = 'alert alert-danger';
+                errorDiv.innerHTML = data.message || 'Something went wrong. Please try again.';
+            }
+        })
+        .catch(error => {
+            errorDiv.className = 'alert alert-danger';
+            errorDiv.innerHTML = 'Network error. Please try again.';
+        })
+        .finally(() => {
+            submitBtn.disabled = false;
+            document.getElementById('loadingoverlay').style.display = 'none';
         });
-    </script>
-;
+    });
+});
+</script>
+
 
 
 
